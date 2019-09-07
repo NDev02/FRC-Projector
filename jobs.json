@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Later Software",
+        "lead": "Nathan Gordon",
+        "mentor": "Mr. Mentor",
+        "start_date": "9/6/2019",
+        "end_date": "2/25/2020",
+        "members": [
+            "Some Kid",
+            "Another Kid",
+            "That One Kid",
+            "A. Smart Kid"
+        ],
+        "on_track": true
+    },
+    {
+        "title": "Scouting Software",
+        "lead": "Nathan Gordon",
+        "mentor": "Mr. Mentor",
+        "start_date": "9/6/2019",
+        "end_date": "2/20/2020",
+        "members": [
+            "Some Kid",
+            "Another Kid",
+            "That One Kid",
+            "A. Smart Kid"
+        ],
+        "on_track": false
+    }
+]
