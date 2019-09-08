@@ -2,7 +2,12 @@ window.addEventListener("load", e => {
 
     let dateElm = document.querySelector("#date");
     dateElm.innerHTML = (new Date()).toDateString();
-    injectBoard();
+    if (location.pathname == "/index.html" || location.pathname == "/") {
+        injectBoard();
+    }
+    else {
+        injectList();
+    }
 
 });
 
@@ -77,13 +82,51 @@ function createJobListing(job) {
     divElm.appendChild(memberList);
 
     if (!job.on_track) {
-        divElm.style.border = "1px solid red";
+        divElm.style.background = "rgba(100,0,0,0.5)"
     }
 
     return divElm;
 
 }
 
+function injectList() {
+
+    fetch("./jobs.json").then(res => res.json()).then(jobs => {
+
+        jobs.sort((a, b) => {
+
+            let endA = a.end_date;
+            let endB = b.end_date;
+            return (endA > endB ? 1 : -1);
+
+        });
+        console.log(jobs);
+
+        let list = document.querySelector(".list>tbody");
+        for (let job of jobs) {
+
+            list.appendChild(createJobRow(job));
+
+        }
+
+    });
+
+}
+
+function createJobRow(job) {
+
+    let row = document.createElement("tr");
+    row.appendChild(createElmWithText("td", job.title));
+    row.appendChild(createElmWithText("td", job.lead));
+    row.appendChild(createElmWithText("td", job.mentor));
+    row.appendChild(createElmWithText("td", job.start_date));
+    row.appendChild(createElmWithText("td", job.end_date));
+    row.appendChild(createElmWithText("td", job.on_track));
+    row.appendChild(createElmWithText("td", job.members.length));
+
+    return row;
+
+}
 
 function createElmWithText(type, text) {
 
