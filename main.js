@@ -2,7 +2,9 @@ window.addEventListener("load", e => {
 
     let dateElm = document.querySelector("#date");
     dateElm.innerHTML = (new Date()).toDateString();
-    if (location.pathname == "/index.html" || location.pathname == "/") {
+    let splitPath = location.pathname.split("/");
+    let dir = splitPath[splitPath.length - 1];
+    if (dir == "index.html" || dir == "") {
         injectBoard();
     }
     else {
