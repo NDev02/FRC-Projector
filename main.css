@@ -61,6 +61,11 @@ body :first-child {
     margin: 0.5em;
     padding: 0.7em;
     border-radius: 0.7em;
+    transition: background 0.3s ease-in-out;
+}
+
+.board .listing:hover {
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .list {
@@ -76,6 +81,11 @@ body :first-child {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     padding: 0.5em;
+    transition: color 0.3s ease-in-out;
+}
+
+.list tr:not(.singular):not(:first-child):hover {
+    color: #fbab1a;
 }
 
 .lookup {
@@ -89,6 +99,15 @@ tr.singular {
     border-radius: 0.7em;
     height: 4em;
 }
+
+tr.singular {
+    transition: background 0.3s ease-in-out;
+}
+
+tr.singular:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
 
 tr[hidden] {
     display: none!important;
