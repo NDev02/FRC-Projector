@@ -1,3 +1,5 @@
+let testing = false;
+
 let firebaseConfig = {
     apiKey: "AIzaSyAKpFHIQ_FfNHyJM7Eh1gSFxCeWTnycmKw",
     authDomain: "frc-projector.firebaseapp.com",
@@ -13,10 +15,28 @@ firebase.initializeApp(firebaseConfig);
 
 function readDatabase(path, callback) {
 
-    return firebase.database().ref(path).once('value').then(data => {
+    if (testing) {
 
-        callback(data.val());
+        fetch("./database.json").then(res => res.json()).then(data => {
 
-    });
+            callback(data[path.replace(/\//g, "")]);
+
+        });
+
+    } else {
+
+        firebase.database().ref(path).once('value').then(data => {
+
+            callback(data.val());
+
+        });
+
+    }
+
+}
+
+function setDatabase(path, data) {
+
+    firebase.database().ref(path).set(data);
 
 }

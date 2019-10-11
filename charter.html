@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Charter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <script src="database.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="index.html">Board View</a>
+            </li>
+            <li>
+                <a href="list.html">List View</a>
+            </li>
+            <li>
+                <a href="lookup.html">Lookup</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container charter-container">
+        <h1 id="project-name"></h1>
+        <h2 id="date" hidden></h2>
+        <div class="charter">
+            <div class="left">
+                <div>
+                    <h2 id="lead"></h2>
+                    <h2 id="mentor"></h2>
+                    <h4 id="start"></h4>
+                    <h4 id="end"></h4>
+                </div>
+                <div class="box">
+                    <label>Description:</label>
+                    <p id="description">
+                    </p>
+                </div>
+                <table id="members" cellspacing="0px" class="box">
+                    <th>Name</th>
+                    <th>Role</th>
+                </table>
+            </div>
+            <div class="right">
+                <div>
+                    <h4 id="last-update">Last Update:</h4>
+                    <h4 id="changes">Changes:</h4>
+                    <h4 id="revisor">Revisor:</h4>
+                    <h4 id="approval">Approval:</h4>
+                </div>
+                <div class="box">
+                    <label>Objectives / Deliverables:</label>
+                    <p id="objectives">
+                    </p>
+                </div>
+                <table id="schedule" cellspacing="0px" class="box">
+                    <th>Task / Milestone</th>
+                    <th>Deadline</th>
+                </table>
+            </div>
+        </div>
+        <div class="floater">
+            <button onclick="editCharter()" id="edit">Edit Charter</button>
+            <button onclick="saveCharter()" id="save" hidden>Save Charter</button>
+            <button onclick="window.history.back()">Exit Charter</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -50,6 +50,17 @@ body :first-child {
     grid-template-rows: auto auto auto 1fr;
 }
 
+.charter-container {
+    grid-template-rows: auto 1fr;
+}
+
+.charter-container textarea {
+    width: calc(100% - 1em);
+    height: 7em;
+    padding: 0.5em;
+    align-self: center;
+}
+
 .board {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -62,6 +73,7 @@ body :first-child {
     padding: 0.7em;
     border-radius: 0.7em;
     transition: background 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .board .listing:hover {
@@ -82,6 +94,7 @@ body :first-child {
     grid-template-columns: repeat(7, 1fr);
     padding: 0.5em;
     transition: color 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .list tr:not(.singular):not(:first-child):hover {
@@ -90,6 +103,49 @@ body :first-child {
 
 .lookup {
     background: none;
+}
+
+.charter {
+    padding: 1em 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.5em;
+}
+
+.left, .right {
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr;
+}
+
+.charter h2 {
+    margin: 0.2em 0;
+}
+
+.box {
+    background: white;
+    color: black;
+    border: 2px solid black;
+    margin: 0.5em 0!important;
+    padding: 0.5em!important;
+}
+
+.box label {
+    font-weight: bold;
+}
+
+.charter table {
+    width: calc(100% - 2px);
+    border: 1px solid black;
+    padding: 0!important;
+    background: none;
+}
+
+.charter table td, .charter table th {
+    width: 50%;
+    background: white;
+    padding: 0.2em;
+    border: 1px solid black;
+    color: black;
 }
 
 tr.singular {
@@ -111,6 +167,40 @@ tr.singular:hover {
 
 tr[hidden] {
     display: none!important;
+}
+
+.floater {
+    position: sticky;
+    left: 90%;
+    bottom: 10px;
+    width: fit-content;
+}
+
+button {
+    background: #021c3a;
+    color: white;
+    border: none;
+    padding: 1em!important;
+    border-radius: 0.7em;
+    outline: none!important;
+    transition: background 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.remove {
+    float: right;
+    color: #aa0000;
+    cursor: pointer;
+}
+
+.add {
+    float: right;
+    color: #00aa00;
+    cursor: pointer;
+}
+
+button:active {
+    background: rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 1170px) {
