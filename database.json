@@ -1,0 +1,463 @@
+{
+    "jobs": [
+        {
+            "title": "3D Printing",
+            "lead": "Akul Gupta",
+            "mentor": "Mr. Nary",
+            "start_date": "9/6/2019",
+            "end_date": "1/4/2020",
+            "members": [
+                "Brendan Scarsella",
+                "Bryce Gisondi",
+                "Chris Heltz",
+                "Eric Huffman",
+                "Gianluca Mammano",
+                "Jared Alianell",
+                "Scarlett Ulatowski",
+                "Scott Ulatowski",
+                "Kyle Dempsey"
+            ],
+            "on_track": true
+        },
+        {
+            "title": "Robot Assembly Preseason",
+            "lead": "Mary Dertinger",
+            "mentor": "",
+            "start_date": "9/6/2019",
+            "end_date": "1/4/2020",
+            "members": [
+                "Charlotte Burns",
+                "David Henderson",
+                "Jacob Ferguson",
+                "Leah Winkelman",
+                "Reese Jones",
+                "Semma Alfatlawi",
+                "Tanner Moszak",
+                "Tiffany Doan",
+                "Tyler McKenzie"
+            ],
+            "on_track": true
+        },
+        {
+            "title": "CAD",
+            "lead": "Tiana Heid",
+            "mentor": "Mr. Roome",
+            "start_date": "9/6/2019",
+            "end_date": "1/4/2020",
+            "members": [
+                "Brendan Scarsella",
+                "Gianluca Mammano",
+                "Jared Alianell",
+                "Jordon Cieslinski",
+                "Sydney Prescott"
+            ],
+            "on_track": true
+        },
+        {
+            "title": "Electrical",
+            "lead": "Ethan Pealer",
+            "mentor": "Mr. Pealer",
+            "start_date": "9/6/2019",
+            "end_date": "1/4/2020",
+            "members": [
+                "Adrian Ahrens",
+                "Ben Lange",
+                "Chris Heltz",
+                "Jackson Pealer"
+            ],
+            "on_track": true
+        },
+        {
+            "title": "Machining",
+            "lead": "Brendan Scarsella",
+            "mentor": "Mr. Nary",
+            "start_date": "9/6/2019",
+            "end_date": "1/4/2020",
+            "members": [
+                "Aiden Sisca",
+                "David Henderson",
+                "Eli Schaner",
+                "Eric Huffman",
+                "Kyle Dempsey",
+                "Kyle Godwin",
+                "Phillip Henderson",
+                "Tiffany Doan"
+            ],
+            "on_track": true
+        },
+        {
+            "title": "Robot Design",
+            "lead": "Jared Alianell",
+            "mentor": "Mr. Strohman",
+            "start_date": "9/6/2019",
+            "end_date": "1/4/2020",
+            "members": [
+                "Akul Gupta",
+                "Brendan Scarsella",
+                "Bryce Gisondi",
+                "Elliott DeHollender",
+                "Gianluca Mammano",
+                "Jared Alianell",
+                "Leah Winkelman",
+                "Mary Dertinger",
+                "Noah Barone",
+                "Scarlett Ulatowski",
+                "Scott Ulatowski",
+                "Sydney Prescott",
+                "Tanner Moszak",
+                "Tiana Heid",
+                "Tyler McKenzie"
+            ],
+            "on_track": true
+        },
+        {
+            "title": "Safety",
+            "lead": "Gianluca Mammano",
+            "mentor": "Mr. Fleckenstein",
+            "start_date": "9/6/2019",
+            "end_date": "1/4/2020",
+            "members": [
+                "Ronik Bilmoria",
+                "Ethan Pealer"
+            ],
+            "on_track": true
+        },
+        {
+            "title": "Software",
+            "lead": "Eric Marchetti",
+            "mentor": "Mr. Marchetti",
+            "start_date": "9/6/2019",
+            "end_date": "1/4/2020",
+            "members": [
+                "Alex Novak",
+                "Jack Vander Linden",
+                "Jason VanderLinden",
+                "Jordon Cieslinski",
+                "Matthew Lang",
+                "Nick Carlson",
+                "Noah Wojcik",
+                "Nolan Reh",
+                "Rylan Meilutis"
+            ],
+            "on_track": true
+        },
+        {
+            "title": "Systems Integration",
+            "lead": "Chris Heltz",
+            "mentor": "Mr. Sabelli",
+            "start_date": "9/6/2019",
+            "end_date": "1/4/2020",
+            "members": [
+                "Eric Marchetti",
+                "Ethan Pealer",
+                "Jared Alianell",
+                "Logan Schaeffer",
+                "Mary Dertinger",
+                "Nick Reifsnyder",
+                "Tiana Heid"
+            ],
+            "on_track": true
+        }
+    ],
+    "assignments": [
+        [
+            "Adrian Ahrens",
+            "Electrical",
+            "Community Service"
+        ],
+        [
+            "Aiden O'Neil",
+            "Engineering Lead"
+        ],
+        [
+            "Aiden Sisca",
+            "Machining",
+            "Travel"
+        ],
+        [
+            "Akul Gupta",
+            "3D Printing",
+            "Design",
+            "Fundraising"
+        ],
+        [
+            "Alex Novak",
+            "Software"
+        ],
+        [
+            "Ben Lange",
+            "Electrical",
+            "Photography / Videography"
+        ],
+        [
+            "Brendan Scarsella",
+            "Machining",
+            "3D Printing",
+            "CAD",
+            "Design",
+            "Fundraising"
+        ],
+        [
+            "Bryce Gisondi",
+            "3D Printing",
+            "Design",
+            "Website",
+            "Sponsorship",
+            "Pit Marketing"
+        ],
+        [
+            "Charlotte Burns",
+            "Assembly",
+            "Photography / Videography"
+        ],
+        [
+            "Chris Heltz",
+            "Systems Integration",
+            "3D Printing",
+            "Electrical",
+            "Community Updates"
+        ],
+        [
+            "Connor Powell",
+            "Operations",
+            "Website",
+            "Fundraising",
+            "Business Plan"
+        ],
+        [
+            "David Henderson",
+            "Assembly",
+            "Machining",
+            "Pit Marketing"
+        ],
+        [
+            "Eli Schaner",
+            "Machining",
+            "Sponsorship"
+        ],
+        [
+            "Elliott DeHollender",
+            "Design",
+            "Travel"
+        ],
+        [
+            "Eric Huffman",
+            "3D Printing",
+            "Machining",
+            "Pit Marketing"
+        ],
+        [
+            "Eric Marchetti",
+            "Software",
+            "Systems Integration",
+            "Financing"
+        ],
+        [
+            "Ethan Pealer",
+            "Electrical",
+            "Safety",
+            "Systems Integration",
+            "Roster and Registration",
+            "Fundraising"
+        ],
+        [
+            "Gianluca Mammano",
+            "Safety",
+            "3D Printing",
+            "CAD",
+            "Design",
+            "Team Building"
+        ],
+        [
+            "Jack Vander Linden",
+            "Software",
+            "Judge's Book"
+        ],
+        [
+            "Jackson Pealer",
+            "Electrical",
+            "Financing",
+            "Community Service"
+        ],
+        [
+            "Jacob Ferguson",
+            "Assembly",
+            "Fundraising"
+        ],
+        [
+            "Jared Alianell",
+            "Design",
+            "CAD",
+            "3D Printing",
+            "Systems Integration",
+            "End of Season Banquet"
+        ],
+        [
+            "Jason VanderLinden",
+            "Software",
+            "Website"
+        ],
+        [
+            "Jordon Cieslinski",
+            "CAD",
+            "Software",
+            "Community Updates"
+        ],
+        [
+            "Keith Bikowsky",
+            "Operations Lead"
+        ],
+        [
+            "Kyle Dempsey",
+            "3D Printing",
+            "Machining",
+            "Judge's Book"
+        ],
+        [
+            "Kyle Godwin",
+            "Machining",
+            "Community Updates"
+        ],
+        [
+            "Leah Winkelman",
+            "Assembly",
+            "Design",
+            "Website"
+        ],
+        [
+            "Logan Schaeffer",
+            "Systems Integration",
+            "Awards"
+        ],
+        [
+            "Mary Dertinger",
+            "Assembly",
+            "Design",
+            "Systems Integration",
+            "FIRST Mural"
+        ],
+        [
+            "Matthew Lang",
+            "Software",
+            "Roster and Registration"
+        ],
+        [
+            "Melania Mammano",
+            "Operations",
+            "Team Building",
+            "Website",
+            "Pit Marketing",
+            "Business Plan",
+            "End of Season Banquet"
+        ],
+        [
+            "Nathan Gordon",
+            "Team Director"
+        ],
+        [
+            "Nick Carlson",
+            "Software",
+            "Sponsorship"
+        ],
+        [
+            "Nick Reifsnyder",
+            "Systems Integration",
+            "Roster and Registration"
+        ],
+        [
+            "Noah Barone",
+            "Design",
+            "Judge's Book"
+        ],
+        [
+            "Noah Wojcik",
+            "Software",
+            "Business Plan"
+        ],
+        [
+            "Nolan Reh",
+            "Software",
+            "Community Updates"
+        ],
+        [
+            "Phillip Henderson",
+            "Machining",
+            "Team Building"
+        ],
+        [
+            "Rachael Link",
+            "Operations",
+            "Awards",
+            "Apparel",
+            "FIRST Mural"
+        ],
+        [
+            "Reese Jones",
+            "Assembly",
+            "Photography / Videography"
+        ],
+        [
+            "Ronik Bilimoria",
+            "Safety",
+            "Awards"
+        ],
+        [
+            "Rylan Meilutis",
+            "Software",
+            "Awards"
+        ],
+        [
+            "Scarlett Ulatowski",
+            "3D Printing",
+            "Design",
+            "Apparel",
+            "FIRST Mural",
+            "End of Season Banquet"
+        ],
+        [
+            "Scott Ulatowski",
+            "3D Printing",
+            "Design",
+            "Apparel"
+        ],
+        [
+            "Semma Alfatlawi",
+            "Assembly",
+            "Judge's Book"
+        ],
+        [
+            "Sydney Prescott",
+            "CAD",
+            "Design",
+            "Awards",
+            "Apparel"
+        ],
+        [
+            "Tanner Moszak",
+            "Assembly",
+            "Design",
+            "Community Service"
+        ],
+        [
+            "Tiana Heid",
+            "CAD",
+            "Design",
+            "Systems Integration",
+            "Travel"
+        ],
+        [
+            "Tiffany Doan",
+            "Assembly",
+            "Machining",
+            "Pit Marketing",
+            "Business Plan",
+            "Website"
+        ],
+        [
+            "Tyler McKenzie",
+            "Assembly",
+            "Design",
+            "Awards"
+        ]
+    ]
+}

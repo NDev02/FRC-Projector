@@ -17,7 +17,7 @@ window.addEventListener("load", e => {
 
 function injectBoard() {
 
-    fetch("./jobs.json").then(res => res.json()).then(jobs => {
+    readDatabase("/jobs", jobs => {
 
         jobs.sort((a, b) => {
 
@@ -92,7 +92,7 @@ function createJobListing(job) {
 
 function injectList() {
 
-    fetch("./jobs.json").then(res => res.json()).then(jobs => {
+    readDatabase("/jobs", jobs => {
 
         jobs.sort((a, b) => {
 
@@ -149,14 +149,13 @@ function createList(items) {
 
 function injectLookup() {
 
-    fetch("./project-teams.csv").then(res => res.text()).then(csv => {
+    readDatabase("/assignments", json => {
 
-        const json = CSVJSON.csv2json(csv, { parseNumbers: true });
         let list = document.querySelector(".list>tbody");
         for (let person of json) {
 
             let row = document.createElement("tr");
-            row.className = `singular ${person["Name"].toLowerCase().replace(/ /g, "")}`;
+            row.className = `singular ${person[0].toLowerCase().replace(/ /g, "")}`;
             let used = [];
             for (let key of Object.keys(person)) {
 
