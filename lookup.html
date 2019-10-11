@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lookup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="csvjson.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="index.html">Board View</a>
+            </li>
+            <li>
+                <a href="list.html">List View</a>
+            </li>
+            <li>
+                <a href="lookup.html">Lookup</a>
+            </li>
+            <li>
+                <a onclick="location.reload(true)">Reload</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container lookup-container">
+        <h1>List View</h1>
+        <h2 id="date"></h2>
+        <div class="search">
+            <input type="text" placeholder="Enter a name..." oninput="updateSearch()">
+            <button>find</button>
+        </div>
+        <table class="list lookup">
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

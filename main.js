@@ -7,8 +7,10 @@ window.addEventListener("load", e => {
     if (dir == "index.html" || dir == "") {
         injectBoard();
     }
-    else {
+    else if (dir == "list.html") {
         injectList();
+    } else {
+        injectLookup();
     }
 
 });
@@ -47,16 +49,13 @@ function injectBoard() {
 function createJobListing(job) {
 
     /*
-    let job = {
-        "title": "Scouting Software",
-        "lead": "Nathan Gordon",
-        "mentor": "Mr. Mentor",
-        "end_date": "2/20/2020",
+    {
+        "title": "",
+        "lead": "",
+        "mentor": "",
+        "start_date": "",
+        "end_date": "",
         "members": [
-            "Some Kid",
-            "Another Kid",
-            "That One Kid",
-            "A. Smart Kid"
         ],
         "on_track": true
     } 
@@ -145,5 +144,51 @@ function createList(items) {
         listElm.appendChild(createElmWithText("li", item));
     }
     return listElm;
+
+}
+
+function injectLookup() {
+
+    fetch("./project-teams.csv").then(res => res.text()).then(csv => {
+
+        const json = CSVJSON.csv2json(csv, { parseNumbers: true });
+        let list = document.querySelector(".list>tbody");
+        for (let person of json) {
+
+            let row = document.createElement("tr");
+            row.className = `singular ${person["Name"].toLowerCase().replace(/ /g, "")}`;
+            let used = [];
+            for (let key of Object.keys(person)) {
+
+                if (person[key] != "" && !used.includes(person[key])) {
+
+                    used.push(person[key]);
+                    row.appendChild(createElmWithText("td", person[key]));
+
+                }
+
+            }
+            list.appendChild(row);
+
+        }
+
+    });
+
+}
+
+function updateSearch() {
+
+    let elms = document.querySelectorAll(".singular");
+    for (let elm of elms) {
+
+        elm.setAttribute("hidden", "");
+
+        if (elm.classList[1].includes(event.target.value.toLowerCase().replace(/ /g, ""))) {
+
+            elm.removeAttribute("hidden");
+
+        }
+
+    }
 
 }
