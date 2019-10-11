@@ -382,7 +382,7 @@ function createScheduleBox(project, edit) {
 
 function openCharter(projectName) {
 
-    location.href = "/charter.html?project=" + projectName;
+    location.href = "./charter.html?project=" + projectName;
 
 }
 
