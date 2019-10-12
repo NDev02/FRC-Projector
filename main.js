@@ -71,14 +71,19 @@ function injectBoard() {
 
         let board = document.querySelector(".board");
         for (let job of jobs) {
+            
+            if(job) {
+            
+                let end = new Date(job.end_date);
+                let start = new Date(job.start_date);
+                let today = new Date();
+                if (end >= today && today >= start) {
 
-            let end = new Date(job.end_date);
-            let start = new Date(job.start_date);
-            let today = new Date();
-            if (end >= today && today >= start) {
+                    board.appendChild(createJobListing(job));
 
-                board.appendChild(createJobListing(job));
+                }
 
+                
             }
 
         }
