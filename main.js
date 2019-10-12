@@ -154,6 +154,12 @@ function injectList() {
         let list = document.querySelector(".list>tbody");
         for (let job of jobs) {
 
+            if(!job) {
+            
+                return;
+                
+            }
+            
             list.appendChild(createJobRow(job));
 
         }
@@ -165,13 +171,6 @@ function injectList() {
 }
 
 function createJobRow(job) {
-
-    if(!job) {
-        
-        console.log(job);
-        return;
-        
-    }
     
     let row = document.createElement("tr");
     row.setAttribute("onclick", `openCharter('${job.title.replace(/ /g, "-")}')`);
