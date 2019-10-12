@@ -71,9 +71,9 @@ function injectBoard() {
 
         let board = document.querySelector(".board");
         for (let job of jobs) {
-            
-            if(job) {
-            
+
+            if (job) {
+
                 let end = new Date(job.end_date);
                 let start = new Date(job.start_date);
                 let today = new Date();
@@ -83,7 +83,7 @@ function injectBoard() {
 
                 }
 
-                
+
             }
 
         }
@@ -154,12 +154,12 @@ function injectList() {
         let list = document.querySelector(".list>tbody");
         for (let job of jobs) {
 
-            if(!job) {
-            
+            if (!job) {
+
                 continue;
-                
+
             }
-            
+
             list.appendChild(createJobRow(job));
 
         }
@@ -171,7 +171,7 @@ function injectList() {
 }
 
 function createJobRow(job) {
-    
+
     let row = document.createElement("tr");
     row.setAttribute("onclick", `openCharter('${job.title.replace(/ /g, "-")}')`);
     row.appendChild(createElmWithText("td", job.title));
@@ -281,22 +281,22 @@ function injectCharter() {
 
         for (let job of jobs) {
 
-            if(!job) {
-            
+            if (!job) {
+
                 continue;
-                
+
             }
-            
+
             if (job.title == projectName) {
                 project = job;
             }
 
         }
-        
-        if(project.members == undefined) {
-        
+
+        if (project.members == undefined) {
+
             project.members = [];
-            
+
         }
 
         if (project && !edit) {
@@ -619,12 +619,12 @@ function createCharter() {
 
             for (let project of data) {
 
-                if(!project) {
-                
+                if (!project) {
+
                     continue;
-                    
+
                 }
-                
+
                 if (project.title == name) {
 
                     alert(`A project by the name '${name}' already exists, no new project will be created.`);
@@ -654,22 +654,24 @@ function deleteCharter() {
 
             for (let i = 0; i < data.length; i++) {
 
-                if(!data[i]) {
-                
+                if (!data[i]) {
+
+                    data.splice(i, 1);
+                    i--;
                     continue;
-                    
+
                 }
-                
+
                 if (data[i].title == target) {
 
                     if (confirm(`Locked onto the target, are you sure you want to delete '${target}'?`)) {
 
                         deleteDatabase(`/jobs/${i}`).then(res => {
-                        
+
                             console.log(res);
                             alert("Charter Deleted");
                             location.reload();
-                            
+
                         });
 
                     }
