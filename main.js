@@ -607,6 +607,12 @@ function createCharter() {
 
             for (let project of data) {
 
+                if(!project) {
+                
+                    continue;
+                    
+                }
+                
                 if (project.title == name) {
 
                     alert(`A project by the name '${name}' already exists, no new project will be created.`);
@@ -636,6 +642,12 @@ function deleteCharter() {
 
             for (let i = 0; i < data.length; i++) {
 
+                if(!data[i]) {
+                
+                    continue;
+                    
+                }
+                
                 if (data[i].title == target) {
 
                     if (confirm(`Locked onto the target, are you sure you want to delete '${target}'?`)) {
