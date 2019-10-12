@@ -156,7 +156,7 @@ function injectList() {
 
             if(!job) {
             
-                return;
+                continue;
                 
             }
             
