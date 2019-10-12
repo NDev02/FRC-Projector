@@ -22,11 +22,11 @@ window.addEventListener("load", e => {
     if (user == null && !location.pathname.includes("account.html")) {
 
         alert("You must login.");
-        location.pathname = "./account.html";
+        location.href = "./account.html";
 
     } else if (user != null && location.pathname.includes("account.html")) {
 
-        // location.pathname = "./index.html"; // TODO uncomment
+        location.href = "./index.html"; // TODO uncomment
 
     }
 
