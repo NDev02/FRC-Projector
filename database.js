@@ -144,6 +144,6 @@ function setDatabase(path, data) {
 
 function deleteDatabase(path) {
 
-    firebase.database().ref(path).remove();
+    return firebase.database().ref(path).remove();
     
 }
