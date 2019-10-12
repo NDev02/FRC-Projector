@@ -50,6 +50,11 @@ body :first-child {
     grid-template-rows: auto auto auto 1fr;
 }
 
+.lookup-container tr td:first-child {
+    color: #fbab1a;
+    font-weight: bold;
+}
+
 .charter-container {
     grid-template-rows: auto 1fr;
 }
@@ -203,7 +208,8 @@ tr[hidden] {
 button {
     background: #021c3a;
     color: white;
-    border: none;
+    border: 2px solid white;
+    margin: 0.2em;
     padding: 1em!important;
     border-radius: 0.7em;
     outline: none!important;
@@ -243,6 +249,19 @@ button:active {
 
 }
 
+@media (max-width: 800px) {
+
+    .charter {
+        grid-template-columns: 1fr;
+        row-gap: 1em;
+    }
+
+    .left div:first-child, .right div:first-child {
+        align-self: center;
+    }
+
+}
+
 @media (max-width: 575px) {
 
     .board {
@@ -260,4 +279,49 @@ button:active {
         background: #001c3b;
     }
 
+}
+
+.loading-screen {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #001935;
+    display: grid;
+}
+
+.loading-screen-disappear {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #001935;
+    display: grid;
+    animation: fade 0.5s ease-in 1;
+}
+
+.loading-logo {
+    border: 16px solid #002b5c; /* Light grey */
+    border-top: 16px solid #fbab1a; /* Blue */
+    border-bottom: 16px solid #fbab1a; /* Blue */
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    animation: spin 1s ease-in infinite;
+    align-self: center;
+    margin: 0 auto!important;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fade {
+    from { opacity: 1; }
+    to { opacity: 0; }
 }

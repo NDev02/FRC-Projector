@@ -1,10 +1,22 @@
 let loadFinished = false;
 
+let templateCharter = {
+    "end_date": "",
+    "lead": "",
+    "members": [],
+    "mentor": "",
+    "on_track": true,
+    "start_date": "",
+    "title": ""
+}
+
 let loadEventListener = window.setInterval(e => {
 
     if (loadFinished) {
 
         // alert("Done Loading!");
+        document.querySelector(".loading-screen").className = "loading-screen-disappear";
+        setTimeout(() => { document.querySelector(".loading-screen-disappear").remove() }, 500);
         clearInterval(loadEventListener);
 
     }
@@ -12,6 +24,13 @@ let loadEventListener = window.setInterval(e => {
 }, 500);
 
 window.addEventListener("load", e => {
+
+    let loadingScreen = document.createElement("div");
+    loadingScreen.className = "loading-screen";
+    let loadingLogo = document.createElement("div");
+    loadingLogo.className = "loading-logo";
+    loadingScreen.appendChild(loadingLogo);
+    document.body.appendChild(loadingScreen);
 
     let dateElm = document.querySelector("#date");
     dateElm.innerHTML = (new Date()).toDateString();
@@ -21,11 +40,19 @@ window.addEventListener("load", e => {
         injectBoard();
     }
     else if (dir == "list.html") {
+        if (window.innerWidth < 950) {
+            alert("This page is not optimized for small screens, try going into landscape mode if you encounter issues.");
+        }
         injectList();
     } else if (dir == "lookup.html") {
+        if (window.innerWidth < 950) {
+            alert("This page is not optimized for small screens, try going into landscape mode if you encounter issues.");
+        }
         injectLookup();
     } else if (dir == "charter.html") {
         injectCharter();
+    } else {
+        loadFinished = true;
     }
 
 });
@@ -41,7 +68,6 @@ function injectBoard() {
             return (endA > endB ? 1 : -1);
 
         });
-        console.log(jobs);
 
         let board = document.querySelector(".board");
         for (let job of jobs) {
@@ -119,7 +145,6 @@ function injectList() {
             return (endA > endB ? 1 : -1);
 
         });
-        console.log(jobs);
 
         let list = document.querySelector(".list>tbody");
         for (let job of jobs) {
@@ -144,7 +169,11 @@ function createJobRow(job) {
     row.appendChild(createElmWithText("td", job.start_date));
     row.appendChild(createElmWithText("td", job.end_date));
     row.appendChild(createElmWithText("td", job.on_track));
-    row.appendChild(createElmWithText("td", job.members.length));
+    if (job.members) {
+        row.appendChild(createElmWithText("td", job.members.length));
+    } else {
+        row.appendChild(createElmWithText("td", 0));
+    }
 
     return row;
 
@@ -313,7 +342,7 @@ function createMemberBox(project, edit) {
 
     if (!edit) {
 
-        for (let member of project.members) {
+        for (let member of (project.members || [])) {
 
             let tr = document.createElement("tr");
             tr.appendChild(createElmWithText("td", member));
@@ -324,7 +353,7 @@ function createMemberBox(project, edit) {
 
     } else {
 
-        for (let member of project.members) {
+        for (let member of (project.members || [])) {
 
             let tr = document.createElement("tr");
             tr.appendChild(createElmWithText("td", member));
@@ -555,5 +584,66 @@ function addMilestone() {
 
     }
     modifiedCharter.milestones.push(milestone);
+
+}
+
+function createCharter() {
+
+    let name = prompt("Enter a name for the project");
+    if (name != null) {
+
+        readDatabase("/jobs", data => {
+
+            for (let project of data) {
+
+                if (project.title == name) {
+
+                    alert(`A project by the name '${name}' already exists, no new project will be created.`);
+                    return;
+
+                }
+
+            }
+
+            templateCharter.title = name;
+            setDatabase(`/jobs/${data.length}`, templateCharter);
+            alert("Charter created.");
+            location.reload();
+
+        });
+
+    }
+
+}
+
+function deleteCharter() {
+
+    let target = prompt("Enter the project name exactly as it is listed");
+    if (target != null) {
+
+        readDatabase("/jobs", data => {
+
+            for (let i = 0; i < data.length; i++) {
+
+                if (data[i].title == target) {
+
+                    if (confirm(`Locked onto the target, are you sure you want to delete '${target}'?`)) {
+
+                        setDatabase(`/jobs/${i}`, null);
+                        alert("Charter deleted.");
+                        location.reload();
+
+                    }
+                    return;
+
+                }
+
+            }
+
+            alert(`Failed to find a project by the name '${target}'.`);
+
+        });
+
+    }
 
 }

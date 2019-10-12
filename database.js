@@ -75,9 +75,20 @@ function readDatabase(path, callback) {
                 let projects = data.val();
                 for (let project of projects) {
 
-                    for (let member of project.members) {
+                    if (Object.keys(people).includes(project.lead)) {
 
-                        if (Object.keys(people).includes(member)) {
+                        people[project.lead].push(project.title);
+
+                    } else {
+
+                        people[project.lead] = [];
+                        people[project.lead].push(project.title);
+
+                    }
+
+                    for (let member of (project.members || [])) {
+
+                        if (Object.keys(people).includes(member) && !people[member].includes(project.title)) {
 
                             people[member].push(project.title);
 
@@ -122,5 +133,9 @@ function readDatabase(path, callback) {
 function setDatabase(path, data) {
 
     firebase.database().ref(path).set(data);
+
+}
+
+function deleteDatabase() {
 
 }

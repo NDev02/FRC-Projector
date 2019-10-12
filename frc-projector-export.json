@@ -1,0 +1,95 @@
+{
+  "jobs" : [ {
+    "approval" : "Nathan Gordon",
+    "changes" : "Updated online charter",
+    "description" : "3D printing parts for the robot.",
+    "end_date" : "1/4/2020",
+    "last_update" : "10/12/2019",
+    "lead" : "Akul Gupta",
+    "members" : [ "Brendan Scarsella", "Bryce Gisondi", "Chris Heltz", "Eric Huffman", "Gianluca Mammano", "Jared Alianell", "Scarlett Ulatowski", "Scott Ulatowski", "Kyle Dempsey" ],
+    "mentor" : "Mr. Nary",
+    "milestones" : [ {
+      "deadline" : "Kickoff",
+      "name" : "Train members"
+    }, {
+      "deadline" : "Kickoff",
+      "name" : "Update software"
+    }, {
+      "deadline" : "Kickoff",
+      "name" : "Printing efficiency"
+    }, {
+      "deadline" : "Kickoff",
+      "name" : "Box updates"
+    } ],
+    "objectives" : "Train New Members, \nUpdate software, \nImprove printing efficiency.",
+    "on_track" : "true",
+    "revisor" : "Nathan Gordon",
+    "start_date" : "9/6/2019",
+    "title" : "3D Printing"
+  }, {
+    "end_date" : "1/4/2020",
+    "lead" : "Mary Dertinger",
+    "members" : [ "Charlotte Burns", "David Henderson", "Jacob Ferguson", "Leah Winkelman", "Reese Jones", "Semma Alfatlawi", "Tanner Moszak", "Tiffany Doan", "Tyler McKenzie" ],
+    "mentor" : "",
+    "on_track" : true,
+    "start_date" : "9/6/2019",
+    "title" : "Robot Assembly"
+  }, {
+    "end_date" : "1/4/2020",
+    "lead" : "Tiana Heid",
+    "members" : [ "Brendan Scarsella", "Gianluca Mammano", "Jared Alianell", "Jordon Cieslinski", "Sydney Prescott" ],
+    "mentor" : "Mr. Roome",
+    "on_track" : true,
+    "start_date" : "9/6/2019",
+    "title" : "CAD"
+  }, {
+    "end_date" : "1/4/2020",
+    "lead" : "Ethan Pealer",
+    "members" : [ "Adrian Ahrens", "Ben Lange", "Chris Heltz", "Jackson Pealer" ],
+    "mentor" : "Mr. Pealer",
+    "on_track" : true,
+    "start_date" : "9/6/2019",
+    "title" : "Electrical"
+  }, {
+    "end_date" : "1/4/2020",
+    "lead" : "Brendan Scarsella",
+    "members" : [ "Aiden Sisca", "David Henderson", "Eli Schaner", "Eric Huffman", "Kyle Dempsey", "Kyle Godwin", "Phillip Henderson", "Tiffany Doan" ],
+    "mentor" : "Mr. Nary",
+    "on_track" : true,
+    "start_date" : "9/6/2019",
+    "title" : "Machining"
+  }, {
+    "end_date" : "1/4/2020",
+    "lead" : "Jared Alianell",
+    "members" : [ "Akul Gupta", "Brendan Scarsella", "Bryce Gisondi", "Elliott DeHollender", "Gianluca Mammano", "Jared Alianell", "Leah Winkelman", "Mary Dertinger", "Noah Barone", "Scarlett Ulatowski", "Scott Ulatowski", "Sydney Prescott", "Tanner Moszak", "Tiana Heid", "Tyler McKenzie" ],
+    "mentor" : "Mr. Strohman",
+    "on_track" : true,
+    "start_date" : "9/6/2019",
+    "title" : "Robot Design"
+  }, {
+    "end_date" : "1/4/2020",
+    "lead" : "Gianluca Mammano",
+    "members" : [ "Ronik Bilmoria", "Ethan Pealer" ],
+    "mentor" : "Mr. Fleckenstein",
+    "on_track" : true,
+    "start_date" : "9/6/2019",
+    "title" : "Safety"
+  }, {
+    "end_date" : "2020-01-04",
+    "lead" : "Eric Marchetti",
+    "members" : [ "Alex Novak", "Jack Vander Linden", "Jason VanderLinden", "Jordon Cieslinski", "Matthew Lang", "Nick Carlson", "Noah Wojcik", "Nolan Reh", "Rylan Meilutis" ],
+    "mentor" : "Mr. Marchetti",
+    "objectives" : "Train new people: robot, Java, GitHub\nMake sure robot functions for Ruckus\nDo prework on code.",
+    "on_track" : true,
+    "start_date" : "2019-09-06",
+    "title" : "Software"
+  }, {
+    "end_date" : "1/4/2020",
+    "lead" : "Chris Heltz",
+    "members" : [ "Eric Marchetti", "Ethan Pealer", "Jared Alianell", "Logan Schaeffer", "Mary Dertinger", "Nick Reifsnyder", "Tiana Heid" ],
+    "mentor" : "Mr. Sabelli",
+    "on_track" : true,
+    "start_date" : "9/6/2019",
+    "title" : "Systems Integration"
+  } ]
+}
