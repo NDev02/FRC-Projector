@@ -39,6 +39,7 @@ function startSignIn() {
 
         localStorage.setItem("user", JSON.stringify(result.user));
         user = result.user;
+        location.href = "./index.html"; // TODO uncomment
 
     });
 
