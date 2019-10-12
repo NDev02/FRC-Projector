@@ -10,8 +10,10 @@
         href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="charter.css">
     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
     <script src="database.js"></script>
     <script src="main.js"></script>
 </head>
@@ -40,15 +42,20 @@
                     <h2 id="mentor"></h2>
                     <h4 id="start"></h4>
                     <h4 id="end"></h4>
+                    <div class="inline-input">
+                        <label>On Track</label><input id="track" type="checkbox" disabled>
+                    </div>
                 </div>
                 <div class="box">
                     <label>Description:</label>
                     <p id="description">
                     </p>
                 </div>
-                <table id="members" cellspacing="0px" class="box">
-                    <th>Name</th>
-                    <th>Role</th>
+                <table cellspacing="0px" class="box">
+                    <tbody id="members">
+                        <th>Name</th>
+                        <th>Role</th>
+                    </tbody>
                 </table>
             </div>
             <div class="right">

@@ -8,7 +8,7 @@ html,body {
 
 body {
     display: grid;
-    grid-template-rows: 4em 1fr;
+    grid-template-rows: 4em auto;
 }
 
 body :first-child {
@@ -52,6 +52,11 @@ body :first-child {
 
 .charter-container {
     grid-template-rows: auto 1fr;
+}
+
+.account-container {
+    grid-template-rows: 1fr;
+    animation: login 2s linear 0s infinite alternate;
 }
 
 .charter-container textarea {
@@ -105,6 +110,12 @@ body :first-child {
     background: none;
 }
 
+.inline-input {
+    column-gap: 0.5em;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
 .charter {
     padding: 1em 0;
     display: grid;
@@ -114,7 +125,7 @@ body :first-child {
 
 .left, .right {
     display: grid;
-    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-rows: 200px 200px auto;
 }
 
 .charter h2 {
@@ -122,11 +133,10 @@ body :first-child {
 }
 
 .box {
-    background: white;
-    color: black;
-    border: 2px solid black;
-    margin: 0.5em 0!important;
-    padding: 0.5em!important;
+    background: rgba(0,0,0,0.37); 
+    border-radius: 0.7em;
+    margin: 0.5em 0!important; 
+    padding: 1em!important;
 }
 
 .box label {
@@ -134,18 +144,15 @@ body :first-child {
 }
 
 .charter table {
-    width: calc(100% - 2px);
-    border: 1px solid black;
+    width: 100%;
+    /* border: 1px solid black; */
     padding: 0!important;
-    background: none;
+    /* background: none; */
 }
 
 .charter table td, .charter table th {
     width: 50%;
-    background: white;
-    padding: 0.2em;
-    border: 1px solid black;
-    color: black;
+    padding: 1em;
 }
 
 tr.singular {
@@ -167,6 +174,23 @@ tr.singular:hover {
 
 tr[hidden] {
     display: none!important;
+}
+
+.dashboard {
+
+    align-self: center;
+    text-align: center;
+
+}
+
+#login-hint {
+
+    margin: 0 auto!important;
+    display: block;
+    align-self: center;
+    width: fit-content;
+    max-width: 500px;
+
 }
 
 .floater {
@@ -223,6 +247,17 @@ button:active {
 
     .board {
         grid-template-columns: 1fr;
+    }
+
+}
+
+@keyframes login {
+
+    from {
+        background: #002b5c;
+    }
+    to {
+        background: #001c3b;
     }
 
 }

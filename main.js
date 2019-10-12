@@ -1,3 +1,16 @@
+let loadFinished = false;
+
+let loadEventListener = window.setInterval(e => {
+
+    if (loadFinished) {
+
+        // alert("Done Loading!");
+        clearInterval(loadEventListener);
+
+    }
+
+}, 500);
+
 window.addEventListener("load", e => {
 
     let dateElm = document.querySelector("#date");
@@ -11,7 +24,7 @@ window.addEventListener("load", e => {
         injectList();
     } else if (dir == "lookup.html") {
         injectLookup();
-    } else {
+    } else if (dir == "charter.html") {
         injectCharter();
     }
 
@@ -43,6 +56,8 @@ function injectBoard() {
             }
 
         }
+
+        loadFinished = true;
 
     });
 
@@ -85,7 +100,7 @@ function createJobListing(job) {
     let memberList = createList(job.members);
     divElm.appendChild(memberList);
 
-    if (!job.on_track) {
+    if (!eval(job.on_track)) {
         divElm.style.background = "rgba(100,0,0,0.5)"
     }
 
@@ -112,6 +127,8 @@ function injectList() {
             list.appendChild(createJobRow(job));
 
         }
+
+        loadFinished = true;
 
     });
 
@@ -175,6 +192,8 @@ function injectLookup() {
 
         }
 
+        loadFinished = true;
+
     });
 
 }
@@ -234,6 +253,7 @@ function injectCharter() {
             document.querySelector("#mentor").innerHTML = `Mentor: ${project.mentor}`;
             document.querySelector("#start").innerHTML = `Start Date: ${project.start_date}`;
             document.querySelector("#end").innerHTML = `End Date: ${project.end_date}`;
+            document.querySelector("#track").checked = eval(project.on_track);
 
             document.querySelector("#description").innerHTML = (project.description || "");
 
@@ -262,6 +282,9 @@ function injectCharter() {
             document.querySelector("#mentor").innerHTML = `Mentor: <input type="text" onchange="updateInformation('mentor')" placeholder="${project.mentor}">`;
             document.querySelector("#start").innerHTML = `Start Date: <input type="date" onchange="updateInformation('start_date')" value="${project.start_date}">`;
             document.querySelector("#end").innerHTML = `End Date: <input type="date" onchange="updateInformation('end_date')" value="${project.end_date}">`;
+            document.querySelector("#track").checked = eval(project.on_track);
+            document.querySelector("#track").onchange = () => { event.target.value = event.target.checked; updateInformation('on_track') };
+            document.querySelector("#track").removeAttribute("disabled");
 
             document.querySelector("#description").innerHTML = `<textarea onchange="updateInformation('description')">${(project.description || "")}</textarea>`;
 
@@ -277,6 +300,8 @@ function injectCharter() {
             createScheduleBox(project, true);
 
         }
+
+        loadFinished = true;
 
     });
 
@@ -402,6 +427,12 @@ function updateInformation(field) {
 }
 
 function saveCharter() {
+
+    let date = new Date();
+    modifiedCharter["last_update"] = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+    modifiedCharter.changes = prompt("Provide a brief summary of what was changed.");
+    modifiedCharter.revisor = user.displayName;
+    modifiedCharter.approval = prompt("Who looked over these changes? (Enter the name of a mentor or director)");
 
     readDatabase("/jobs", data => {
 
