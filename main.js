@@ -664,9 +664,13 @@ function deleteCharter() {
 
                     if (confirm(`Locked onto the target, are you sure you want to delete '${target}'?`)) {
 
-                        deleteDatabase(`/jobs/${i}`);
-                        alert("Charter deleted.");
-                        location.reload();
+                        deleteDatabase(`/jobs/${i}`).then(res => {
+                        
+                            console.log(res);
+                            alert("Charter Deleted");
+                            location.reload();
+                            
+                        });
 
                     }
                     return;
