@@ -307,9 +307,9 @@ button:active {
 }
 
 .loading-logo {
-    border: 16px solid #002b5c; /* Light grey */
-    border-top: 16px solid #fbab1a; /* Blue */
-    border-bottom: 16px solid #fbab1a; /* Blue */
+    border: 16px solid #002b5c;
+    border-top: 16px solid #fbab1a;
+    border-bottom: 16px solid #fbab1a;
     border-radius: 50%;
     width: 5em;
     height: 5em;
