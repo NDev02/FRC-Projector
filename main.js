@@ -281,6 +281,12 @@ function injectCharter() {
 
         for (let job of jobs) {
 
+            if(!job) {
+            
+                continue;
+                
+            }
+            
             if (job.title == projectName) {
                 project = job;
             }
