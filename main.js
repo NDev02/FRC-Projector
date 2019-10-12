@@ -166,6 +166,13 @@ function injectList() {
 
 function createJobRow(job) {
 
+    if(!job) {
+        
+        console.log(job);
+        return;
+        
+    }
+    
     let row = document.createElement("tr");
     row.setAttribute("onclick", `openCharter('${job.title.replace(/ /g, "-")}')`);
     row.appendChild(createElmWithText("td", job.title));
