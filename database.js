@@ -74,7 +74,13 @@ function readDatabase(path, callback) {
                 let flattened = [];
                 let projects = data.val();
                 for (let project of projects) {
-
+                    
+                    if(!project) {
+                    
+                        continue;
+                        
+                    }
+                    
                     if (Object.keys(people).includes(project.lead)) {
 
                         people[project.lead].push(project.title);
