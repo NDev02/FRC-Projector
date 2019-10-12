@@ -73,6 +73,7 @@ function readDatabase(path, callback) {
                 let people = {};
                 let flattened = [];
                 let projects = data.val();
+                projects.filter(e => e);
                 for (let project of projects) {
                     
                     if(!project) {
