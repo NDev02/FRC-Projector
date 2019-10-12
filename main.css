@@ -290,7 +290,7 @@ button:active {
     right: 0;
     background: #001935;
     display: grid;
-    align-items: center;
+    align-content: center;
 }
 
 .loading-screen-disappear {
@@ -303,6 +303,7 @@ button:active {
     background: #001935;
     display: grid;
     animation: fade 0.5s ease-in 1;
+    align-content: center;
 }
 
 .loading-logo {
