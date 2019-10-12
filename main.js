@@ -292,6 +292,12 @@ function injectCharter() {
             }
 
         }
+        
+        if(project.members == undefined) {
+        
+            project.members = [];
+            
+        }
 
         if (project && !edit) {
 
