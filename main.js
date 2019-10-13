@@ -154,7 +154,7 @@ function injectList() {
         let list = document.querySelector(".list>tbody");
         for (let job of jobs) {
 
-            if (!job) {
+            if (!job.title) {
 
                 continue;
 
@@ -281,7 +281,7 @@ function injectCharter() {
 
         for (let job of jobs) {
 
-            if (!job) {
+            if (!job.title) {
 
                 continue;
 
@@ -630,7 +630,7 @@ function createCharter() {
 
             for (let project of data) {
 
-                if (!project) {
+                if (!project.tile) {
 
                     continue;
 
@@ -665,10 +665,8 @@ function deleteCharter() {
 
             for (let i = 0; i < data.length; i++) {
 
-                if (!data[i]) {
+                if (!data[i].title) {
 
-                    data.splice(i, 1);
-                    i--;
                     continue;
 
                 }
@@ -677,7 +675,7 @@ function deleteCharter() {
 
                     if (confirm(`Locked onto the target, are you sure you want to delete '${target}'?`)) {
 
-                        deleteDatabase(`/jobs/${i}`).then(res => {
+                        setDatabase(`/jobs/${i}`, { "deleted": "deleted" }).then(res => {
 
                             console.log(res);
                             alert("Charter Deleted");

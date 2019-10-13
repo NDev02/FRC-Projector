@@ -72,10 +72,11 @@ function readDatabase(path, callback) {
 
                 let people = {};
                 let flattened = [];
-                let projects = data.val().filter(e => e);
+                let projects = data.val();
+
                 for (let project of projects) {
 
-                    if (!project) {
+                    if (!project.title) {
 
                         continue;
 
@@ -126,7 +127,9 @@ function readDatabase(path, callback) {
 
             } else {
 
-                callback(data.val().filter(e => e));
+                let projects = data.val();
+
+                callback(projects);
 
             }
 
