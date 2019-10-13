@@ -14,7 +14,6 @@ let loadEventListener = window.setInterval(e => {
 
     if (loadFinished) {
 
-        // alert("Done Loading!");
         document.querySelector(".loading-screen").className = "loading-screen-disappear";
         setTimeout(() => { document.querySelector(".loading-screen-disappear").remove() }, 500);
         clearInterval(loadEventListener);
@@ -369,7 +368,7 @@ function createMemberBox(project, edit) {
 
             let tr = document.createElement("tr");
             tr.appendChild(createElmWithText("td", member));
-            tr.appendChild(createElmWithText("td", (project[`${member.toLowerCase().replace(/ /g, "_")}_role`] || "No role assigned"))); // TODO
+            tr.appendChild(createElmWithText("td", (project[`${member.toLowerCase().replace(/ /g, "_")}_role`] || "No role assigned")));
             memberBox.appendChild(tr);
 
         }
