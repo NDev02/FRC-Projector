@@ -76,12 +76,6 @@ function readDatabase(path, callback) {
 
                 for (let project of projects) {
                     
-                    if(project.title == "CAD") {
-                    
-                        console.log(project);
-                        
-                    }
-                    
                     if (!project.title) {
 
                         continue;
@@ -105,7 +99,7 @@ function readDatabase(path, callback) {
 
                             people[member].push(project.title);
 
-                        } else {
+                        } else if (!Object.keys(people).includes(member)) {
 
                             people[member] = [];
                             people[member].push(project.title);
