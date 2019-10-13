@@ -115,9 +115,11 @@ function readDatabase(path, callback) {
                 for (let person of Object.keys(people)) {
 
                     let arr = [];
-                    console.log(arr);
                     arr.push(person);
+                    console.log(person);
+                    console.log(arr);
                     arr = arr.concat(people[person]);
+                    console.log(arr);
                     flattened.push(arr);
 
                 }
