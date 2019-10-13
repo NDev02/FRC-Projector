@@ -120,7 +120,7 @@ function readDatabase(path, callback) {
                 }
 
                 flattened.sort((a, b) => {
-                    return ([a[0], b[0]].sort())[0] == a[0] ? 0 : 1;
+                    return ([a[0], b[0]].sort())[0] == a[0] ? -1 : 1;
                 })
 
                 callback(flattened);
