@@ -488,22 +488,33 @@ function saveCharter() {
 
     readDatabase("/jobs", data => {
 
+        let found = false;
+
         for (let i = 0; i < data.length; i++) {
 
             if (data[i].title == originalCharter.title) {
 
-                setDatabase(`/jobs/${i}`, modifiedCharter);
-                alert("Charter saved!");
-                history.back();
-                return;
+                found = true;
+
+                setDatabase(`/jobs/${i}`, modifiedCharter).then(res => {
+
+                    alert("Charter saved!");
+                    history.back();
+                    return;
+
+                });
 
             }
 
         }
 
-        setDatabase(`/jobs/${data.length}`, modifiedCharter);
-        alert("Charter saved!");
-        history.back();
+        if (!found) {
+
+            setDatabase(`/jobs/${data.length}`, modifiedCharter);
+            alert("Charter saved!");
+            history.back();
+
+        }
 
     });
 
