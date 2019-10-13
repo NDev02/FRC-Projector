@@ -76,6 +76,8 @@ function readDatabase(path, callback) {
 
                 for (let project of projects) {
 
+                    console.log(project);
+                    
                     if (!project.title) {
 
                         continue;
