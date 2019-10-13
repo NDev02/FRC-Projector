@@ -74,13 +74,13 @@ function readDatabase(path, callback) {
                 let flattened = [];
                 let projects = data.val().filter(e => e);
                 for (let project of projects) {
-                    
-                    if(!project) {
-                    
+
+                    if (!project) {
+
                         continue;
-                        
+
                     }
-                    
+
                     if (Object.keys(people).includes(project.lead)) {
 
                         people[project.lead].push(project.title);
@@ -138,12 +138,12 @@ function readDatabase(path, callback) {
 
 function setDatabase(path, data) {
 
-    firebase.database().ref(path).set(data);
+    return firebase.database().ref(path).set(data);
 
 }
 
 function deleteDatabase(path) {
 
     return firebase.database().ref(path).remove();
-    
+
 }
