@@ -75,8 +75,12 @@ function readDatabase(path, callback) {
                 let projects = data.val();
 
                 for (let project of projects) {
-
-                    console.log(project);
+                    
+                    if(project.title == "CAD") {
+                    
+                        console.log(project);
+                        
+                    }
                     
                     if (!project.title) {
 
@@ -116,10 +120,7 @@ function readDatabase(path, callback) {
 
                     let arr = [];
                     arr.push(person);
-                    console.log(person);
-                    console.log(arr);
                     arr = arr.concat(people[person]);
-                    console.log(arr);
                     flattened.push(arr);
 
                 }
