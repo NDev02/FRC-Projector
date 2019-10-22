@@ -621,6 +621,11 @@ function addMilestone() {
 }
 
 function createCharter() {
+    
+    if(user.displayName != "Nathan Gordon") {
+        alert("You do not have permission to create project charters");
+        return;
+    }
 
     let name = prompt("Enter a name for the project");
     if (name != null) {
@@ -657,6 +662,11 @@ function createCharter() {
 
 function deleteCharter() {
 
+    if(user.displayName != "Nathan Gordon") {
+        alert("You do not have permission to delete project charters");
+        return;
+    }
+    
     let target = prompt("Enter the project name exactly as it is listed");
     if (target != null) {
 
