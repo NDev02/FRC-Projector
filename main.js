@@ -131,7 +131,7 @@ function createJobListing(job) {
     divElm.appendChild(memberList);
 
     if (!eval(job.on_track)) {
-        divElm.style.background = "rgba(100,0,0,0.5)"
+        divElm.style.background = "rgba(255,0,0,0.5)"
     }
 
     return divElm;
