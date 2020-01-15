@@ -12,6 +12,7 @@ let firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
+firebase.analytics();
 
 let user;
 
