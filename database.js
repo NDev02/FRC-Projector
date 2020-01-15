@@ -30,8 +30,6 @@ window.addEventListener("load", e => {
 
     }
 
-    firebase.analytics();
-
 });
 
 function startSignIn() {
