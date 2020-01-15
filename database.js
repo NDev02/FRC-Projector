@@ -12,7 +12,6 @@ let firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
 
 let user;
 
@@ -30,6 +29,8 @@ window.addEventListener("load", e => {
         location.href = "./index.html"; // TODO uncomment
 
     }
+
+    firebase.analytics();
 
 });
 
